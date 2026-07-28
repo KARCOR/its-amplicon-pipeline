@@ -1,0 +1,33 @@
+name: Lint y Tests
+
+# Se ejecuta en cada push y pull request. Corre flake8 sobre el notebook
+# (vía nbqa) y pytest sobre its_pipeline/ — el mismo estándar de CI que usan
+# pipelines de industria como nf-core (nf-core lint + pytest en cada push).
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+          pip install nbqa flake8
+
+      - name: flake8 sobre el notebook (vía nbqa)
+        run: |
+          # E501 (línea larga) y E402 (import no al inicio) se ignoran a
+          # propósito: son estilísticos y esperables en notebooks, no
+          # indican errores reales de código.
+          python -m nbqa flake8 ITS_pipeline_notebook.ipynb --extend-ignore=E402,E501
+
+      - name: pytest
+        run: pytest -q
