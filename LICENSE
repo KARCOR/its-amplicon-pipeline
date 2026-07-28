@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-Nota sobre los datos: esta licencia MIT cubre el código (notebooks, scripts) de
-este repositorio. Los datasets de terceros incluidos o referenciados en cada
-proyecto conservan su propia licencia de origen (ver el README de cada carpeta
-para la atribución correspondiente: nf-core/test-datasets, ENIGMA/Zenodo (CC BY
-4.0), Kaggle, GroupLens/MovieLens).
