@@ -6,6 +6,7 @@
 ![scikit--bio](https://img.shields.io/badge/scikit--bio-diversity-green?style=flat)
 ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+[![CI](https://github.com/KARCOR/its-amplicon-pipeline/actions/workflows/lint-test.yml/badge.svg)](https://github.com/KARCOR/its-amplicon-pipeline/actions/workflows/lint-test.yml)
 ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 
 ## Contenido
