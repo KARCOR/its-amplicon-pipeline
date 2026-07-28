@@ -1,0 +1,8 @@
+pandas>=2.3
+numpy>=2.2
+matplotlib>=3.10
+scikit-bio>=0.7
+biopython>=1.87
+cutadapt>=5.2
+nbformat>=5.10
+pytest>=8.0

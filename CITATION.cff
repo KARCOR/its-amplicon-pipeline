@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Si usas o haces referencia a este repositorio, por favor cítalo como se indica a continuación."
+type: software
+title: "Portafolio de Análisis de Datos — Karina Correa"
+abstract: >
+  Portafolio de proyectos de análisis de datos con énfasis en bioinformática
+  (amplicón ITS, diversidad microbiana 16S rRNA), análisis exploratorio de
+  negocio y limpieza/integración de datos. Incluye un pipeline reproducible
+  de bioinformática (QC, cutadapt, DADA2, diversidad alfa/beta) y un
+  reanálisis de datos públicos de diversidad microbiana en aguas subterráneas
+  (estudio ENIGMA).
+authors:
+  - family-names: "Correa"
+    given-names: "Karina"
+    email: "correak096@gmail.com"
+repository-code: "https://github.com/KARCOR"
+license: MIT
+date-released: "2026-07-27"
+keywords:
+  - bioinformática
+  - microbioma
+  - amplicón ITS
+  - DADA2
+  - análisis de datos
+  - ciencia de datos
+  - reproducibilidad

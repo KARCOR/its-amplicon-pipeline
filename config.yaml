@@ -1,0 +1,53 @@
+# Configuración del pipeline ITS — espejo legible de its_pipeline/config.py
+#
+# Este archivo documenta los parámetros del pipeline en formato config-as-code,
+# siguiendo la convención de nf-core (nextflow.config / params.yaml) y de
+# Cookiecutter Data Science (config.py como fuente única de parámetros).
+# No se lee automáticamente en el notebook actual (los valores viven en
+# its_pipeline/config.py); se mantiene como referencia humana y como paso
+# intermedio hacia una futura migración a Hydra/argparse si el pipeline crece.
+
+datos:
+  directorio_datos: data
+  directorio_resultados: results
+  directorio_trimmed: results/trimmed
+  # Las muestras NO se listan aquí: se detectan automáticamente a partir de
+  # los archivos presentes en directorio_datos (its_pipeline/discovery.py).
+  # Estas 3 son solo el dataset de DEMOSTRACIÓN, usado únicamente si
+  # directorio_datos está vacío la primera vez que se corre el notebook.
+  muestras_demo:
+    - it-its_1
+    - it-its_2
+    - it-its_3
+  url_base_demo: https://github.com/nf-core/test-datasets/raw/ampliseq/testdata/
+
+primers:
+  # ITS3-Mix2 / ITS4-Mix (región ITS2 fúngica), ver README para cita completa.
+  forward: GTGARTCATCGARTCTTTG
+  reverse_complement: GCATATCAATAAGSSGAGGA
+
+cutadapt:
+  longitud_minima: 50
+  discard_untrimmed: true
+  # Máximo de procesos cutadapt simultáneos al escalar a muchas muestras.
+  # null = lo decide ThreadPoolExecutor; en el notebook se usa os.cpu_count().
+  procesos_paralelos: null
+
+visualizacion:
+  # Por encima de esta cantidad de muestras, los gráficos ocultan
+  # leyendas/anotaciones individuales (se vuelven ilegibles) y muestran solo
+  # un resumen agregado.
+  limite_muestras_para_etiquetas: 20
+
+diversidad:
+  metricas_alfa:
+    - shannon
+    - simpson
+    - riqueza_observada
+  metrica_beta: braycurtis
+  ordinacion: pcoa
+
+entorno:
+  python: ">=3.10"
+  gestor_dependencias: pip
+  archivo_dependencias: requirements.txt
