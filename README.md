@@ -1,5 +1,24 @@
 # Pipeline de Análisis de Amplicón ITS — Comunidades Fúngicas / Levaduras
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
+![DADA2](https://img.shields.io/badge/DADA2-Bioconductor-blue?style=flat)
+![scikit--bio](https://img.shields.io/badge/scikit--bio-diversity-green?style=flat)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=flat&logo=pytest&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+
+## Contenido
+
+- [Dataset](#dataset)
+- [Estado del pipeline](#estado-del-pipeline)
+- [Resultados](#resultados)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Escalabilidad: de 3 muestras a N muestras](#escalabilidad-de-3-muestras-a-n-muestras)
+- [Cómo reproducir con tus propios datos](#cómo-reproducir-con-tus-propios-datos-plantilla-lista-para-usar)
+- [Referencias y estándares seguidos](#referencias-y-estándares-seguidos)
+- [Próximos pasos](#próximos-pasos)
+
 **Pregunta:** ¿un pipeline de bioinformática puede recuperar correctamente variantes de secuencia (ASVs) fúngicas a partir de datos NGS reales, de principio a fin, sin intervención manual y sin QIIME2?
 
 **Resultado en una frase:** 100% de las lecturas contienen el primer esperado en las 3 muestras, tabla de ASVs sin quimeras generada con DADA2, y diversidad alfa/beta calculada — plantilla lista para correr con datos NGS propios.
@@ -48,6 +67,8 @@ Dado que esta es tecnología IonTorrent (no Illumina), el filtrado usa `maxEE` (
 ---
 
 ## Resultados
+
+![Composición taxonómica por muestra](results/taxonomic_composition.png)
 
 - 100% de las lecturas contenían el primer esperado en las 3 muestras (confirma que los primers usados son correctos para este dataset)
 - ~97-98.5% de las lecturas pasaron el filtro de longitud mínima tras el recorte
