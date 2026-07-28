@@ -8,7 +8,7 @@ Pipeline reproducible de bioinformática para análisis de secuenciación de amp
 
 > Flujo de trabajo end-to-end: control de calidad → recorte de primers → inferencia de variantes de secuencia (ASVs) → remoción de quimeras → diversidad alfa y beta → composición, aplicado a datos reales de secuenciación.
 
-**Por qué este proyecto:** aplica metodología directamente relacionada con análisis de comunidades fúngicas en procesos de fermentación (café, cacao) — el mismo tipo de datos que se generan en investigación de fermentación espontánea con levaduras, área en la que tengo experiencia previa como investigadora.
+**Por qué este proyecto:** reproduce, con datos NGS reales, un flujo de trabajo completo de bioinformática de amplicón siguiendo el estándar de la industria (nf-core/ampliseq) — control de calidad, recorte de primers, inferencia de ASVs, remoción de quimeras y diversidad alfa/beta — pensado para adaptarse a cualquier dataset de comunidades fúngicas, sin importar el dominio de origen.
 
 ---
 
@@ -165,7 +165,7 @@ Cada decisión de diseño del pipeline sigue un estándar publicado, no una elec
 ## Próximos pasos
 
 - [ ] Descargar la base UNITE y correr `assignTaxonomy()` (código ya listo en `dada2_pipeline.R`)
-- [ ] Aplicar el mismo pipeline a datos públicos de fermentación de café (ej. BioProject PRJNA616237) para conectar directamente con mi experiencia en fermentación con levaduras
+- [ ] Aplicar el mismo pipeline a un dataset propio de mayor tamaño para probar la escalabilidad en un caso real
 - [ ] (Roadmap) Migrar a QIIME2 completo para visualizaciones interactivas — ver `_trabajo_futuro/QIIME2_roadmap/`
 
 ---
