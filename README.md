@@ -172,5 +172,4 @@ Cada decisión de diseño del pipeline sigue un estándar publicado, no una elec
 
 ## Autora
 
-**Karina Correa** — Bióloga en transición a Análisis de Datos
-David, Chiriquí, Panamá · [LinkedIn](https://linkedin.com/in/karina-correa-aparicio) · [GitHub](https://github.com/KARCOR)
+Karina Correa — [LinkedIn](https://linkedin.com/in/karina-correa-aparicio) · [GitHub](https://github.com/KARCOR)
